@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
@@ -14,7 +16,10 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome, container, false)
+        val binding : FragmentWelcomeBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_welcome, container, false)
+
+        return binding.root
     }
 
 }
