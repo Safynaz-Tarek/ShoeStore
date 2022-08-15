@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--I used a linear layout here because the design in this fragment is pretty simple
+    There is no need to add complexities for a label & a button -->
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.welcome.WelcomeFragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/welcome_screen">
+        android:background="@drawable/background"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <TextView
@@ -22,10 +25,7 @@
             android:text="Shoe Store"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="250dp"/>
 
         <TextView
             android:id="@+id/textView4"
@@ -35,10 +35,7 @@
             android:fontFamily="@font/roboto_bold"
             android:text="So glad to see you here, Welcome !"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/next_button"
@@ -47,10 +44,7 @@
             android:background="@drawable/shape"
             android:text="Next"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            android:layout_marginTop="250dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

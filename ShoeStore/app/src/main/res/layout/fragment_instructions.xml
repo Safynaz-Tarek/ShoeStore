@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Same as the welcome screen, I used a linear layout here because the design in this fragment is pretty simple
+    There is no need to add complexities for a label & a button -->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screens.instructions.InstructionsFragment">
+        tools:context=".screens.instructions.InstructionsFragment"
+        android:orientation="vertical"
+        android:gravity="center" >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please go to the next page"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"/>
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="You can add new items by \n pressing the floating button"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="100dp"/>
+
+        <Button
+            android:layout_marginTop="200dp"
+            android:id="@+id/go_to_shoelist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:background="@drawable/shape"/>
+
+    </LinearLayout>
 </layout>

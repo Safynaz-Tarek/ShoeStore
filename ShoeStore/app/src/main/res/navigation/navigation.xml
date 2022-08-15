@@ -15,5 +15,33 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.screens.instructions.InstructionsFragment"
+        android:label="InstructionsFragment" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoelistFragment"
+            app:destination="@id/shoelistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoelistFragment"
+        android:name="com.udacity.shoestore.screens.shoeList.ShoelistFragment"
+        android:label="ShoelistFragment" >
+        <action
+            android:id="@+id/action_shoelistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.udacity.shoestore.screens.details.DetailsFragment"
+        android:label="DetailsFragment" >
+        <action
+            android:id="@+id/action_detailsFragment_to_shoelistFragment"
+            app:destination="@id/shoelistFragment" />
+    </fragment>
 </navigation>
