@@ -21,7 +21,8 @@ class WelcomeFragment : Fragment() {
         val binding : FragmentWelcomeBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_welcome, container, false)
 
-        (activity as MainActivity).supportActionBar?.title = "Welcome"
+//        (activity as MainActivity).supportActionBar?.title = "Welcome"
+
         binding.nextButton.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
