@@ -21,8 +21,6 @@ class ShoelistFragment : Fragment() {
         val binding : FragmentShoelistBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoelist, container, false)
 
-//        (activity as MainActivity).supportActionBar?.title = "List"
-
         binding.addItemButton.setOnClickListener{view: View ->
             Navigation.findNavController(view).navigate(ShoelistFragmentDirections.actionShoelistFragmentToDetailsFragment())
         }

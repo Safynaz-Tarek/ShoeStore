@@ -23,8 +23,6 @@ class LoginFragment : Fragment() {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
         R.layout.fragment_login,container, false)
 
-//        (activity as MainActivity).supportActionBar?.title = "Login"
-
         binding.loginButtonExisting.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }

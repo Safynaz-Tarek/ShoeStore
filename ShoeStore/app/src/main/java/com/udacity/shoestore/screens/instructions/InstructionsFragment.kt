@@ -24,8 +24,6 @@ class InstructionsFragment : Fragment() {
         val binding : FragmentInstructionsBinding = DataBindingUtil.inflate(inflater,
         R.layout.fragment_instructions, container,false)
 
-//        (activity as MainActivity).supportActionBar?.title = "Instructions"
-
         binding.goToShoelistButton.setOnClickListener { view : View ->
             Navigation.findNavController(view).navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoelistFragment())
         }

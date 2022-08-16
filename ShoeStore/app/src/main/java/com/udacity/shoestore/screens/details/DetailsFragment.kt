@@ -30,9 +30,6 @@ class DetailsFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ActivityViewModel::class.java)
         binding.activityViewModel = viewModel
 
-
-//        (activity as MainActivity).supportActionBar?.title = "Details"
-
         binding.cancelButton.setOnClickListener { view : View ->
             Navigation.findNavController(view).navigate(DetailsFragmentDirections.actionDetailsFragmentToShoelistFragment())
         }
