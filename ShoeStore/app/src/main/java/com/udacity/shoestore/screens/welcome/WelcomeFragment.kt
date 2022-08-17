@@ -21,7 +21,6 @@ class WelcomeFragment : Fragment() {
         val binding : FragmentWelcomeBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_welcome, container, false)
 
-
         binding.nextButton.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }

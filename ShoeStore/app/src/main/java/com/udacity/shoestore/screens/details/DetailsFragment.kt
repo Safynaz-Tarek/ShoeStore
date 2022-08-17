@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.udacity.shoestore.ActivityViewModel
@@ -16,7 +18,7 @@ import com.udacity.shoestore.databinding.FragmentDetailsBinding
 
 class DetailsFragment : Fragment() {
 
-    private lateinit var viewModel: ActivityViewModel
+    private val viewModel by activityViewModels<ActivityViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,10 +29,14 @@ class DetailsFragment : Fragment() {
         val binding : FragmentDetailsBinding = DataBindingUtil.inflate(inflater,
         R.layout.fragment_details, container, false)
 
-        viewModel = ViewModelProvider(this).get(ActivityViewModel::class.java)
         binding.activityViewModel = viewModel
 
+
         binding.cancelButton.setOnClickListener { view : View ->
+            Navigation.findNavController(view).navigate(DetailsFragmentDirections.actionDetailsFragmentToShoelistFragment())
+        }
+        binding.saveButton.setOnClickListener { view : View->
+            viewModel.onSave()
             Navigation.findNavController(view).navigate(DetailsFragmentDirections.actionDetailsFragmentToShoelistFragment())
         }
 
