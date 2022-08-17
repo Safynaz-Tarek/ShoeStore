@@ -34,10 +34,10 @@ class ActivityViewModel: ViewModel(){
         clearFields()
     }
 
-    private fun clearFields() {
+     fun clearFields() {
         shoeName.value = ""
         company.value = ""
-        shoeSize.value = 0.0.toString()
+        shoeSize.value = ""
         description.value = ""
 
     }
