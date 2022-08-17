@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--I chose a constraint layout here because i wanted to sort the UI in a way that is
+not strictly horizontal or vertical-->
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

@@ -11,7 +11,8 @@
     </data>
 
 <!--   I used Relative layout here so that i can add the floating action button as
-        it can't be inside the scrollview -->
+        it can't be inside the scrollview
+        Then i used the LinearLayout inside the scollview as required-->
 
 <RelativeLayout
     android:layout_width="match_parent"

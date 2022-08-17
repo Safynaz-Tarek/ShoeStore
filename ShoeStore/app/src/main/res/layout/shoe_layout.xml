@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Although there is a nested layout here, the design is still simple, an outer linear
+layout that adds textviews vertically, the nested one is just to add a label [ ex: "Shoe Name"]
+next to the text view that will hold information that i want to show [ex "Adidas"] :-->
 <layout  xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:id="@+id/shoe_linearLayout"
